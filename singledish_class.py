@@ -61,7 +61,7 @@ def produce_map_fig(hdu):
   fig = plt.figure(501)
   fig_layout = gridspec.GridSpec(1,1)
   sub_fig = fig.add_subplot(fig_layout[0,0],projection=wcs)
-  map_img = plt.imshow(map_mat)
+  map_img = plt.imshow(map_mat, origin='lower')
   plt.colorbar(map_img)
   plt.xlabel('R.A. (J2000)')
   plt.ylabel('Dec. (J2000)')
